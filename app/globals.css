@@ -449,3 +449,23 @@ h1 {
   h1 { font-size: 3rem; }
   .primaryArea, .linksArea, .infoPanel, .loginCard, .editorCard, .linksManager { border-radius: 22px; }
 }
+
+.emptyState {
+  border: 1px solid rgba(254, 134, 46, 0.26);
+  background: linear-gradient(135deg, rgba(254, 134, 46, 0.08), rgba(255, 255, 255, 0.95));
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.emptyState h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.emptyState p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

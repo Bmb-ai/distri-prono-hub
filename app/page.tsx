@@ -1,15 +1,18 @@
+import { noStore } from 'next/cache';
 import { LinkCard } from '@/components/LinkCard';
 import { LogoSecret } from '@/components/LogoSecret';
 import { SecretAdminTrigger } from '@/components/SecretAdminTrigger';
-import { defaultLinks } from '@/lib/defaultLinks';
 import type { HubLink } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 async function getLinks(): Promise<HubLink[]> {
+  noStore();
+
   try {
     const { hasSupabaseConfig, getSupabaseAdmin } = await import('@/lib/supabaseAdmin');
-    if (!hasSupabaseConfig()) return defaultLinks;
+    if (!hasSupabaseConfig()) return [];
 
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
@@ -21,15 +24,15 @@ async function getLinks(): Promise<HubLink[]> {
 
     if (error) throw error;
     return (data ?? []) as HubLink[];
-  } catch {
-    return defaultLinks;
+  } catch (error) {
+    console.error(error);
+    return [];
   }
 }
 
 export default async function HomePage() {
   const links = await getLinks();
   const primary = links.find((link) => link.is_primary) ?? links[0];
-  const otherLinks = links.filter((link) => link.id !== primary?.id);
 
   return (
     <main className="pageShell">
@@ -65,37 +68,29 @@ export default async function HomePage() {
       </section>
 
       <section className="contentWrap">
-        {primary ? (
-          <div className="primaryArea">
-            <div className="sectionTitle">
-              <span>Formulaire à utiliser</span>
-              <h2>Pronostics actuellement ouverts</h2>
-            </div>
-            <LinkCard link={primary} featured />
+        <div className="primaryArea">
+          <div className="sectionTitle">
+            <span>Formulaire à utiliser</span>
+            <h2>Pronostics actuellement ouverts</h2>
           </div>
-        ) : null}
 
-        {otherLinks.length ? (
-          <div className="linksArea">
-            <div className="sectionTitle">
-              <span>Liens utiles</span>
-              <h2>Journées, classement et règlement</h2>
+          {primary ? (
+            <LinkCard link={primary} featured />
+          ) : (
+            <div className="emptyState">
+              <h3>Aucun formulaire ouvert pour le moment</h3>
+              <p>Revenez bientôt ou rapprochez-vous de l’équipe Distri Concept pour connaître la prochaine journée de pronostics.</p>
             </div>
-            <div className="cardsGrid">
-              {otherLinks.map((link) => (
-                <LinkCard key={link.id} link={link} />
-              ))}
-            </div>
-          </div>
-        ) : null}
+          )}
+        </div>
 
         <section className="infoPanel">
           <h2>Comment ça marche ?</h2>
           <div className="steps">
-            <p><strong>1.</strong> Choisissez la journée de pronostics encore ouverte.</p>
-            <p><strong>2.</strong> Remplissez le formulaire Tally avec vos scores.</p>
+            <p><strong>1.</strong> Cliquez sur le formulaire de pronostics actuellement ouvert.</p>
+            <p><strong>2.</strong> Remplissez vos scores sur Tally avant la clôture.</p>
             <p><strong>3.</strong> Utilisez toujours la même adresse e-mail pour cumuler vos points.</p>
-            <p><strong>4.</strong> Le classement est mis à jour après vérification des résultats.</p>
+            <p><strong>4.</strong> Le gagnant sera désigné après vérification des résultats.</p>
           </div>
         </section>
 

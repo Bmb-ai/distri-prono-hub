@@ -1,13 +1,16 @@
 import { NextResponse } from 'next/server';
-import { defaultLinks } from '@/lib/defaultLinks';
 import { hasSupabaseConfig, getSupabaseAdmin } from '@/lib/supabaseAdmin';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET() {
   try {
     if (!hasSupabaseConfig()) {
-      return NextResponse.json({ links: defaultLinks, source: 'fallback' });
+      return NextResponse.json(
+        { links: [], source: 'no-config' },
+        { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+      );
     }
 
     const supabase = getSupabaseAdmin();
@@ -20,9 +23,15 @@ export async function GET() {
 
     if (error) throw error;
 
-    return NextResponse.json({ links: data ?? [], source: 'supabase' });
+    return NextResponse.json(
+      { links: data ?? [], source: 'supabase' },
+      { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+    );
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ links: defaultLinks, source: 'fallback', error: 'Impossible de charger Supabase. Mode démo actif.' });
+    return NextResponse.json(
+      { links: [], source: 'error', error: 'Impossible de charger les liens.' },
+      { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+    );
   }
 }
