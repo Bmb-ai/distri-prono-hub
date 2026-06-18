@@ -1,0 +1,44 @@
+[
+  {
+    "id": "demo-mardi",
+    "title": "Pronostics du mardi 23 juin",
+    "subtitle": "Formulaire Tally de la journée",
+    "day_label": "Mardi 23 juin",
+    "url": "https://tally.so/r/LIEN_MARDI",
+    "status": "coming",
+    "closes_at": "2026-06-23T18:45:00+02:00",
+    "matches": [
+      "Portugal - Ouzbékistan",
+      "Angleterre - Ghana"
+    ],
+    "is_active": true,
+    "is_primary": true,
+    "sort_order": 1
+  },
+  {
+    "id": "demo-classement",
+    "title": "Voir le classement",
+    "subtitle": "Classement général mis à jour après validation des scores",
+    "day_label": "Classement",
+    "url": "https://docs.google.com/spreadsheets/d/VOTRE_CLASSEMENT",
+    "status": "open",
+    "closes_at": null,
+    "matches": [],
+    "is_active": true,
+    "is_primary": false,
+    "sort_order": 90
+  },
+  {
+    "id": "demo-reglement",
+    "title": "Consulter le règlement",
+    "subtitle": "Conditions de participation et barème du concours",
+    "day_label": "Règlement",
+    "url": "https://drive.google.com/VOTRE_REGLEMENT",
+    "status": "open",
+    "closes_at": null,
+    "matches": [],
+    "is_active": true,
+    "is_primary": false,
+    "sort_order": 100
+  }
+]
