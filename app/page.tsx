@@ -11,7 +11,7 @@ export default async function HomePage() {
       <section className="hero-card" aria-label="Présentation du jeu concours">
         <div className="hero-copy">
           <div className="eyebrow">Jeu concours gratuit</div>
-          <h1>Grand jeu pronostics football 2026</h1>
+          <h1>Grand jeu Coupe du monde 2026</h1>
           <div className="hero-text">
             <p>
               À l’occasion de la Coupe du monde 2026, participez à notre jeu concours de pronostics et tentez de remporter un jeu de boules Obut.
