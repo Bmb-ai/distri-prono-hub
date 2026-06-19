@@ -23,6 +23,35 @@ export default async function HomePage() {
               <em>Participation gratuite, sans obligation d’achat. Une seule participation par personne.</em>
             </p>
 
+            <div className="contest-phases" aria-label="Deux temps du concours">
+  <div className="contest-phases-header">
+    <span>Deux chances de gagner</span>
+    <strong>2 jeux de boules à remporter</strong>
+  </div>
+
+  <div className="contest-phases-grid">
+    <article className="contest-phase-item">
+      <span className="phase-number">1</span>
+      <div>
+        <h3>Derniers matchs de poules</h3>
+        <p>
+          La première partie du jeu démarre le mardi 23 juin et concerne les derniers matchs de la phase de poules. Un premier gagnant sera désigné à la fin de cette période.
+        </p>
+      </div>
+    </article>
+
+    <article className="contest-phase-item">
+      <span className="phase-number">2</span>
+      <div>
+        <h3>16es de finale</h3>
+        <p>
+          Une seconde partie sera ensuite organisée pour les 16es de finale, avec un nouveau classement et un second jeu de boules à gagner.
+        </p>
+      </div>
+    </article>
+  </div>
+</div>
+
             <div className="hero-social" aria-label="Réseaux sociaux Distri Concept et Concept Solaire">
               <p>
                 Suivez Distri Concept sur Instagram et Facebook pour découvrir les résultats, les rappels des prochaines journées de pronostics et l’annonce du gagnant.
