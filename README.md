@@ -78,3 +78,12 @@ Les liens Instagram et Facebook sont intégrés directement dans le hero, sous l
 Cette version remplace le logo par `LOGO DISTRI CONCEPT FUSION 2.4.svg`, ajoute une courte section de présentation de Distri Concept et Concept Solaire, puis ajoute un footer contact avec les agences de Brindas et Sain-Bel.
 
 Cette modification ne change pas le schéma Supabase et n’impacte pas la table `prediction_cards`.
+
+## Mise à jour réseaux discrets
+
+Les boutons texte Instagram/Facebook du hero ont été remplacés par de petites icônes discrètes. Deux lignes sont affichées :
+
+- Distri Concept : Instagram et Facebook
+- Concept Solaire : Instagram et Facebook
+
+Cette modification est uniquement visuelle. Elle ne touche pas à Supabase, aux cards Tally, à l'espace admin ni aux variables Vercel.

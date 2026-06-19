@@ -141,6 +141,82 @@ h1 {
   font-weight: 650;
 }
 
+.social-mini-list {
+  display: grid;
+  gap: 8px;
+}
+
+.social-mini-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px 9px 12px;
+  border: 1px solid rgba(7, 23, 37, .08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .66);
+}
+
+.social-mini-row > span {
+  color: #344054;
+  font-size: .9rem;
+  font-weight: 850;
+}
+
+.social-icon-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.social-icon-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  color: var(--primary-dark);
+  background: #fff;
+  border: 1px solid rgba(254, 134, 46, .22);
+  box-shadow: 0 8px 18px rgba(7, 23, 37, 0.07);
+  text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
+}
+
+.social-icon-links a:nth-child(2) {
+  color: #1d5bbf;
+  border-color: rgba(29, 91, 191, .18);
+}
+
+.social-icon-links a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(254, 134, 46, .42);
+  box-shadow: 0 12px 24px rgba(7, 23, 37, 0.10);
+}
+
+.social-icon-links a:nth-child(2):hover {
+  border-color: rgba(29, 91, 191, .34);
+}
+
+.social-icon-links svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.social-icon-links svg rect,
+.social-icon-links svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.social-icon-links svg path {
+  fill: currentColor;
+}
+
 .hero-social-links {
   display: flex;
   flex-wrap: wrap;
@@ -720,6 +796,16 @@ h1 {
   .cta,
   .social-button,
   .hero-social-links a { width: 100%; }
+
+  .social-mini-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .social-icon-links a {
+    width: 38px;
+    height: 38px;
+  }
   .prize-card img { aspect-ratio: 1 / 1.05; }
   .contact-office p { grid-template-columns: 1fr; gap: 2px; }
   .footer-contact-card { border-radius: 22px; }

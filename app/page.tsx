@@ -23,17 +23,35 @@ export default async function HomePage() {
               <em>Participation gratuite, sans obligation d’achat. Une seule participation par personne.</em>
             </p>
 
-            <div className="hero-social" aria-label="Réseaux sociaux Distri Concept">
+            <div className="hero-social" aria-label="Réseaux sociaux Distri Concept et Concept Solaire">
               <p>
                 Suivez Distri Concept sur Instagram et Facebook pour découvrir les résultats, les rappels des prochaines journées de pronostics et l’annonce du gagnant.
               </p>
-              <div className="hero-social-links">
-                <a href="https://www.instagram.com/distri_concept69/" target="_blank" rel="noreferrer" aria-label="Suivre Distri Concept sur Instagram">
-                  Instagram
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61551920047655&locale=fr_FR" target="_blank" rel="noreferrer" aria-label="Suivre Distri Concept sur Facebook">
-                  Facebook
-                </a>
+
+              <div className="social-mini-list">
+                <div className="social-mini-row">
+                  <span>Distri Concept</span>
+                  <div className="social-icon-links" aria-label="Réseaux sociaux Distri Concept">
+                    <a href="https://www.instagram.com/distri_concept69/" target="_blank" rel="noreferrer" aria-label="Instagram Distri Concept">
+                      <InstagramIcon />
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61551920047655&locale=fr_FR" target="_blank" rel="noreferrer" aria-label="Facebook Distri Concept">
+                      <FacebookIcon />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="social-mini-row">
+                  <span>Concept Solaire</span>
+                  <div className="social-icon-links" aria-label="Réseaux sociaux Concept Solaire">
+                    <a href="https://www.instagram.com/conceptsolaire69/" target="_blank" rel="noreferrer" aria-label="Instagram Concept Solaire">
+                      <InstagramIcon />
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61569903031500&locale=fr_FR" target="_blank" rel="noreferrer" aria-label="Facebook Concept Solaire">
+                      <FacebookIcon />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -163,5 +181,24 @@ export default async function HomePage() {
         <p className="footer-note">Jeu organisé par Distri Concept. Non affilié à la FIFA, à Instagram ou à Obut.</p>
       </footer>
     </main>
+  );
+}
+
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.5" />
+      <circle cx="12" cy="12" r="3.4" />
+      <circle cx="16.8" cy="7.2" r="1" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M14.2 8.2h2.2V4.6c-.4-.1-1.7-.2-3.1-.2-3.1 0-5.1 1.9-5.1 5.4v3H4.8v4h3.4v7h4.2v-7h3.3l.5-4h-3.8v-2.6c0-1.1.3-2 1.8-2Z" />
+    </svg>
   );
 }
