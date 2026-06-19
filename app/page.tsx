@@ -14,7 +14,7 @@ export default async function HomePage() {
           <h1>Grand jeu pronostics football 2026</h1>
           <div className="hero-text">
             <p>
-              À l’occasion de la Coupe du monde 2026, participez à notre jeu concours de pronostics et tentez de remporter un jeu de boules Obut.
+              À l’occasion de la Coupe du monde 2026, participez à notre jeu concours de pronostics et tentez de remporter l’un des deux jeux de boules Obut mis en jeu.
             </p>
             <p>
               Le principe est simple : pronostiquez les scores des matchs sélectionnés, validez votre grille avant la clôture, et marquez des points selon la précision de vos pronostics.
