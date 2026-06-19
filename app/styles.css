@@ -811,98 +811,248 @@ h1 {
   .footer-contact-card { border-radius: 22px; }
 }
 
-.contest-phases {
-  margin-top: 28px;
-  padding: 22px;
-  border-radius: 28px;
-  border: 1px solid rgba(254, 134, 46, 0.22);
-  background:
-    radial-gradient(circle at top right, rgba(254, 134, 46, 0.14), transparent 42%),
-    rgba(255, 255, 255, 0.72);
-  box-shadow: 0 18px 40px rgba(11, 27, 42, 0.08);
+/* Version finale : hero plus équilibré, phases séparées, contact intégré */
+.hero-card {
+  align-items: center;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.75fr);
+  gap: clamp(22px, 4vw, 52px);
 }
 
-.contest-phases-header {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 18px;
+.hero-copy {
+  position: relative;
+  z-index: 2;
 }
 
-.contest-phases-header span {
-  width: fit-content;
-  padding: 7px 13px;
-  border-radius: 999px;
-  background: rgba(254, 134, 46, 0.13);
-  color: #d95f00;
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+h1 {
+  max-width: 720px;
+  font-size: clamp(3rem, 5.1vw, 4.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.065em;
 }
 
-.contest-phases-header strong {
-  color: #071827;
-  font-size: 1.15rem;
-  line-height: 1.2;
+.hero-text {
+  max-width: 640px;
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
 }
 
-.contest-phases-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.hero-media {
+  align-self: center;
+  gap: 16px;
 }
 
-.contest-phase-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 16px;
+.brand-logo {
+  width: min(210px, 52vw);
+  padding: 14px 18px;
   border-radius: 20px;
-  background: #ffffff;
-  border: 1px solid rgba(7, 24, 39, 0.08);
 }
 
-.phase-number {
+.prize-card {
+  max-width: 420px;
+  justify-self: center;
+}
+
+.prize-card img {
+  aspect-ratio: 4 / 5;
+}
+
+.hero-social {
+  max-width: 520px;
+  margin-top: 6px;
+  padding: 16px;
+}
+
+.hero-social p {
+  font-size: 0.95rem;
+}
+
+.contest-phases {
+  margin-top: 26px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(254, 134, 46, 0.20);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  position: relative;
+}
+
+.contest-phases::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -160px;
+  top: -170px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(254, 134, 46, 0.18), transparent 66%);
+  pointer-events: none;
+}
+
+.contest-phases .section-title {
+  position: relative;
+  z-index: 1;
+}
+
+.contest-phases .section-title h2 {
+  font-size: clamp(1.9rem, 3.3vw, 2.8rem);
+}
+
+.phase-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.phase-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(7, 23, 37, 0.09);
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(7, 23, 37, 0.06);
+}
+
+.phase-card > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 34px;
-  width: 34px;
-  height: 34px;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #fe862e, #e65f00);
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 0.95rem;
-  box-shadow: 0 10px 22px rgba(254, 134, 46, 0.28);
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  font-weight: 950;
+  box-shadow: var(--shadow-orange);
 }
 
-.contest-phase-item h3 {
+.phase-card h3 {
   margin: 0 0 6px;
-  color: #071827;
-  font-size: 1rem;
-  line-height: 1.2;
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
 }
 
-.contest-phase-item p {
+.phase-card p {
   margin: 0;
   color: #5a6878;
-  font-size: 0.92rem;
   line-height: 1.55;
+  font-size: 0.96rem;
 }
 
-@media (max-width: 760px) {
-  .contest-phases {
-    padding: 18px;
-    border-radius: 22px;
-  }
+.site-footer {
+  margin-top: 26px;
+  padding: clamp(22px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
 
-  .contest-phases-grid {
+.footer-heading {
+  margin-bottom: 22px;
+}
+
+.footer-heading h2 {
+  margin: 14px 0 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.footer-contact-card {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.contact-office {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(7, 23, 37, 0.10);
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(7, 23, 37, 0.06);
+}
+
+.contact-office h3 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2.3vw, 1.8rem);
+  letter-spacing: -0.04em;
+}
+
+.contact-office h3::before {
+  content: "→ ";
+  color: var(--primary-dark);
+}
+
+.contact-office p {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 12px;
+  margin: 10px 0 0;
+  color: #5a6677;
+  line-height: 1.45;
+}
+
+.contact-separator {
+  display: none;
+}
+
+.footer-note {
+  margin: 20px auto 0;
+  color: #667085;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero-card {
     grid-template-columns: 1fr;
   }
 
-  .contest-phase-item {
+  .hero-media {
+    order: 0;
+  }
+
+  .prize-card {
+    max-width: 520px;
+  }
+
+  .phase-grid,
+  .footer-contact-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  h1 {
+    font-size: clamp(2.55rem, 13vw, 3.8rem);
+  }
+
+  .hero-social {
     padding: 14px;
+  }
+
+  .phase-card {
+    flex-direction: column;
+  }
+
+  .contact-office p {
+    grid-template-columns: 1fr;
+    gap: 3px;
   }
 }

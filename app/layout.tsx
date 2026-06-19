@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./styles.css";
 
 export const metadata: Metadata = {
-  title: "Grand jeu pronostics football 2026 - Distri Concept",
+  title: "Grand jeu pronostics Coupe du monde 2026 - Distri Concept",
   description: "Participez au jeu concours de pronostics football 2026 et tentez de remporter un jeu de boules Obut."
 };
 

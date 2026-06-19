@@ -11,7 +11,7 @@ export default async function HomePage() {
       <section className="hero-card" aria-label="Présentation du jeu concours">
         <div className="hero-copy">
           <div className="eyebrow">Jeu concours gratuit</div>
-          <h1>Grand jeu pronostics football 2026</h1>
+          <h1>Grand jeu pronostics Coupe du monde 2026</h1>
           <div className="hero-text">
             <p>
               À l’occasion de la Coupe du monde 2026, participez à notre jeu concours de pronostics et tentez de remporter l’un des deux jeux de boules Obut mis en jeu.
@@ -23,38 +23,9 @@ export default async function HomePage() {
               <em>Participation gratuite, sans obligation d’achat. Une seule participation par personne.</em>
             </p>
 
-            <div className="contest-phases" aria-label="Deux temps du concours">
-  <div className="contest-phases-header">
-    <span>Deux chances de gagner</span>
-    <strong>2 jeux de boules à remporter</strong>
-  </div>
-
-  <div className="contest-phases-grid">
-    <article className="contest-phase-item">
-      <span className="phase-number">1</span>
-      <div>
-        <h3>Derniers matchs de poules</h3>
-        <p>
-          La première partie du jeu démarre le mardi 23 juin et concerne les derniers matchs de la phase de poules. Un premier gagnant sera désigné à la fin de cette période.
-        </p>
-      </div>
-    </article>
-
-    <article className="contest-phase-item">
-      <span className="phase-number">2</span>
-      <div>
-        <h3>16es de finale</h3>
-        <p>
-          Une seconde partie sera ensuite organisée pour les 16es de finale, avec un nouveau classement et un second jeu de boules à gagner.
-        </p>
-      </div>
-    </article>
-  </div>
-</div>
-
             <div className="hero-social" aria-label="Réseaux sociaux Distri Concept et Concept Solaire">
               <p>
-                Suivez Distri Concept sur Instagram et Facebook pour découvrir les résultats, les rappels des prochaines journées de pronostics et l’annonce du gagnant.
+                Suivez-nous pour découvrir les résultats, les rappels des prochaines journées de pronostics et l’annonce du gagnant.
               </p>
 
               <div className="social-mini-list">
@@ -91,6 +62,34 @@ export default async function HomePage() {
           <div className="prize-card">
             <Image src="/assets/lot-obut.png" alt="Jeu de boules Obut à gagner" width={900} height={1100} priority />
           </div>
+        </div>
+      </section>
+
+      <section className="contest-phases" aria-label="Deux temps du concours">
+        <div className="section-title compact">
+          <div className="eyebrow">Deux chances de gagner</div>
+          <h2>Deux jeux de boules à remporter</h2>
+          <p>
+            La première partie du jeu démarre le mardi 23 juin et concerne les derniers matchs de la phase de poules. Un premier gagnant sera désigné à la fin de cette période. Une seconde partie sera ensuite organisée pour les 16es de finale, avec un nouveau classement et un second jeu de boules à gagner.
+          </p>
+        </div>
+
+        <div className="phase-grid">
+          <article className="phase-card">
+            <span>1</span>
+            <div>
+              <h3>Derniers matchs de poules</h3>
+              <p>Un premier classement sera établi avec les pronostics ouverts à partir du mardi 23 juin.</p>
+            </div>
+          </article>
+
+          <article className="phase-card">
+            <span>2</span>
+            <div>
+              <h3>16es de finale</h3>
+              <p>Une nouvelle série de pronostics permettra de désigner un second gagnant.</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -189,18 +188,21 @@ export default async function HomePage() {
       </section>
 
       <footer className="site-footer" aria-label="Contact Distri Concept">
+        <div className="footer-heading">
+          <div className="eyebrow">Contact</div>
+          <h2>Nos agences</h2>
+        </div>
+
         <div className="footer-contact-card">
           <div className="contact-office">
-            <h3>→ Brindas</h3>
+            <h3>Brindas</h3>
             <p><span>Adresse</span>37 rue Pré Magné, 69126 Brindas</p>
             <p><span>Téléphone</span><a href="tel:+33478442740">04 78 44 27 40</a></p>
             <p><span>Email</span><a href="mailto:contact@distri-concept.fr">contact@distri-concept.fr</a></p>
           </div>
 
-          <div className="contact-separator" aria-hidden="true" />
-
           <div className="contact-office">
-            <h3>→ Sain-Bel</h3>
+            <h3>Sain-Bel</h3>
             <p><span>Adresse</span>6 chemin Neuf, 69120 Sain-Bel</p>
             <p><span>Téléphone</span><a href="tel:+33487255402">04 87 25 54 02</a></p>
             <p><span>Email</span><a href="mailto:contactsb@distri-concept.fr">contactsb@distri-concept.fr</a></p>
