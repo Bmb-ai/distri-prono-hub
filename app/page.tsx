@@ -11,7 +11,7 @@ export default async function HomePage() {
       <section className="hero-card" aria-label="Présentation du jeu concours">
         <div className="hero-copy">
           <div className="eyebrow">Jeu concours gratuit</div>
-          <h1>Grand jeu Coupe du monde 2026</h1>
+          <h1>Grand jeu pronostics football 2026</h1>
           <div className="hero-text">
             <p>
               À l’occasion de la Coupe du monde 2026, participez à notre jeu concours de pronostics et tentez de remporter un jeu de boules Obut.
@@ -22,6 +22,20 @@ export default async function HomePage() {
             <p className="note">
               <em>Participation gratuite, sans obligation d’achat. Une seule participation par personne.</em>
             </p>
+
+            <div className="hero-social" aria-label="Réseaux sociaux Distri Concept">
+              <p>
+                Suivez Distri Concept sur Instagram et Facebook pour découvrir les résultats, les rappels des prochaines journées de pronostics et l’annonce du gagnant.
+              </p>
+              <div className="hero-social-links">
+                <a href="https://www.instagram.com/distri_concept69/" target="_blank" rel="noreferrer" aria-label="Suivre Distri Concept sur Instagram">
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551920047655&locale=fr_FR" target="_blank" rel="noreferrer" aria-label="Suivre Distri Concept sur Facebook">
+                  Facebook
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -107,8 +121,46 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <footer className="footer-note">
-        Jeu organisé par Distri Concept. Non affilié à la FIFA, à Instagram ou à Obut.
+
+      <section className="about-section" aria-label="À propos de Distri Concept et Concept Solaire">
+        <div className="section-title compact">
+          <div className="eyebrow">À propos</div>
+          <h2>Distri Concept et Concept Solaire</h2>
+          <p>Deux activités complémentaires pour accompagner les projets du quotidien, de l’équipement technique aux solutions solaires.</p>
+        </div>
+
+        <div className="brand-panels">
+          <article className="brand-panel">
+            <h3>Distri Concept</h3>
+            <p>Distributeur local spécialisé dans les équipements techniques pour les particuliers et les professionnels, avec un accompagnement de proximité depuis les agences de Brindas et Sain-Bel.</p>
+          </article>
+          <article className="brand-panel solar">
+            <h3>Concept Solaire</h3>
+            <p>Une expertise dédiée aux solutions solaires pour aider les clients à avancer vers des installations plus performantes, durables et adaptées à leurs besoins.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer className="site-footer" aria-label="Contact Distri Concept">
+        <div className="footer-contact-card">
+          <div className="contact-office">
+            <h3>→ Brindas</h3>
+            <p><span>Adresse</span>37 rue Pré Magné, 69126 Brindas</p>
+            <p><span>Téléphone</span><a href="tel:+33478442740">04 78 44 27 40</a></p>
+            <p><span>Email</span><a href="mailto:contact@distri-concept.fr">contact@distri-concept.fr</a></p>
+          </div>
+
+          <div className="contact-separator" aria-hidden="true" />
+
+          <div className="contact-office">
+            <h3>→ Sain-Bel</h3>
+            <p><span>Adresse</span>6 chemin Neuf, 69120 Sain-Bel</p>
+            <p><span>Téléphone</span><a href="tel:+33487255402">04 87 25 54 02</a></p>
+            <p><span>Email</span><a href="mailto:contactsb@distri-concept.fr">contactsb@distri-concept.fr</a></p>
+          </div>
+        </div>
+
+        <p className="footer-note">Jeu organisé par Distri Concept. Non affilié à la FIFA, à Instagram ou à Obut.</p>
       </footer>
     </main>
   );

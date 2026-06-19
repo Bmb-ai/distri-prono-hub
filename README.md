@@ -56,3 +56,25 @@ La clé `SUPABASE_SERVICE_ROLE_KEY` doit rester privée. Ne jamais la mettre dan
 - Logo : `public/assets/logo-distri-concept.svg`
 - Image du lot : `public/assets/lot-obut.png`
 - Styles : `app/styles.css`
+
+
+## Réseaux sociaux ajoutés
+
+La page publique contient désormais une section `Suivre le concours` avec les liens :
+
+- Instagram : https://www.instagram.com/distri_concept69/
+- Facebook : https://www.facebook.com/profile.php?id=61551920047655&locale=fr_FR
+
+Cette modification ne touche pas à Supabase, aux cards de pronostics, ni à l’espace admin.
+
+
+## Mise à jour réseaux sociaux
+
+Les liens Instagram et Facebook sont intégrés directement dans le hero, sous le texte d’introduction, pour inciter les visiteurs à suivre Distri Concept sans ajouter une section séparée plus bas dans la page.
+
+
+## Mise à jour footer et logo
+
+Cette version remplace le logo par `LOGO DISTRI CONCEPT FUSION 2.4.svg`, ajoute une courte section de présentation de Distri Concept et Concept Solaire, puis ajoute un footer contact avec les agences de Brindas et Sain-Bel.
+
+Cette modification ne change pas le schéma Supabase et n’impacte pas la table `prediction_cards`.
