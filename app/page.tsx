@@ -177,11 +177,17 @@ export default async function HomePage() {
 
         <div className="brand-panels">
           <article className="brand-panel">
-            <h3>Distri Concept</h3>
+            <div className="brand-panel-header">
+              <Image src="/assets/distri-concept-logo.png" alt="Logo Distri Concept" width={220} height={160} />
+              <h3>Distri Concept</h3>
+            </div>
             <p>Distributeur local spécialisé dans les équipements techniques pour les particuliers et les professionnels, avec un accompagnement de proximité depuis les agences de Brindas et Sain-Bel.</p>
           </article>
           <article className="brand-panel solar">
-            <h3>Concept Solaire</h3>
+            <div className="brand-panel-header">
+              <Image src="/assets/concept-solaire-logo.png" alt="Logo Concept Solaire" width={220} height={160} />
+              <h3>Concept Solaire</h3>
+            </div>
             <p>Une expertise dédiée aux solutions solaires pour aider les clients à avancer vers des installations plus performantes, durables et adaptées à leurs besoins.</p>
           </article>
         </div>
@@ -208,8 +214,6 @@ export default async function HomePage() {
             <p><span>Email</span><a href="mailto:contactsb@distri-concept.fr">contactsb@distri-concept.fr</a></p>
           </div>
         </div>
-
-        <p className="footer-note">Jeu organisé par Distri Concept. Non affilié à la FIFA, à Instagram ou à Obut.</p>
       </footer>
     </main>
   );
